@@ -7,3 +7,18 @@
 
 // 3. Print out the number of last names starting with the letter D
 // e.g. Count of last names starting with D is 1
+
+const students = require("./students.json");
+
+students.forEach(({firstName, lastName}) =>{
+    console.log(`Hello, ${firstName} ${lastName}`);
+})
+
+let counter = 0;
+students.forEach(({lastName})=>{
+    if (lastName.startsWith("D")){
+        counter = counter + 1
+    }
+
+})
+console.log(`Counts of last names starting with D is ${counter}`);
